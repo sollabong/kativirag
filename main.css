@@ -73,15 +73,25 @@
     margin-top: 100px;
     font-family: 'Unica One', sans-serif;
   }
-
+.title{
+    font-size: 1.3rem;
+}
   .kati{
       display: flex;
       flex-direction: column;
       align-items: center;
       height: 100%;
       z-index: 100;
+ 
   }
+  .pisti{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    z-index: 100;
 
+}
   .quote{
       display: flex;
       flex-direction: row;
@@ -99,13 +109,13 @@
   .image{
       width: 150px;
       border: 5px solid #fff;
-      border-radius: 75px;
+      border-radius: 50%;
       margin: auto;
-      z-index: 999999;
+      z-index: 198;
   }
 
   .desc-kati{
-      text-align: center;
+      text-align: justify;
       width: 80%;
       color: #000;
       z-index: 100;
@@ -127,28 +137,28 @@
 }
   .button {
     display: block;
-z-index: 100;
+    z-index: 100;
     height: 2.5rem;
     padding-top: 1.3rem;
-    width: 15rem;
+    width: 21rem;
     text-align: center;
     color: #fff;
     border: #fff solid 0.2rem;
+    border-radius: 15px;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
     margin-bottom: 5%;
-    /* transform: translateX(-50%); */
   }
-  
+
   .split {
     position: absolute;
     width: 50%;
     height: 100%;
-    /* overflow: hidden; */
+
   }
-  
+
   .split.left {
     left:0;
     background: url('./assets/kativirag_bicske.jpg') center center no-repeat;
@@ -161,6 +171,7 @@ z-index: 100;
     width: 100%;
     height: 100%;
     background: var(--left-bg-color);
+
   }
   
   .split.right {
@@ -176,27 +187,30 @@ z-index: 100;
     height: 100%;
     background: var(--right-bg-color);
   }
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, .3); 
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    opacity:1;
+    z-index: 199;
+   
+  }
   
+  .split.left:hover .overlay {
+    opacity: 0;
+  }
+  .split.right:hover .overlay {
+    opacity: 0;
+  }
+ 
   .split.left, .split.right, .split.right:before, .split.left:before {
     transition: var(--speed) all ease-in-out;
   }
-  
-  .hover-left .left {
-    width: var(--hover-width);
-  }
-  
-  .hover-left .right {
-    width: var(--other-width);
-  }
-  
-  
-  .hover-right .right {
-    width: var(--hover-width);
-  }
-  
-  .hover-right .left {
-    width: var(--other-width);
-  }
+
     
   @media(max-width: 1200px) {
     html, body {
@@ -204,6 +218,9 @@ z-index: 100;
         margin:0;
         font-family: 'Montserrat', sans-serif;
 
+      }
+      .overlay{
+          opacity: 0;
       }
       .header{
           width: 100vw;
@@ -222,6 +239,9 @@ z-index: 100;
   
     .button {
       width: 12rem;
+    }
+    .desc-kati{
+        text-align: center;
     }
     .image{
         width: 80px;
