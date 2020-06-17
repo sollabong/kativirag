@@ -1,17 +1,17 @@
 :root {
-    --container-bg-color: #333;
-    --left-bg-color: rgba(255, 196, 0, 0.596);
-    --right-bg-color: rgba(6, 235, 102, 0.596);
-    --speed: 1000ms;
-  }
+      --container-bg-color: #333;
+      --left-bg-color: rgba(255, 196, 0, 0.596);
+      --right-bg-color: rgba(6, 235, 102, 0.596);
+      --speed: 1000ms;
+    }
   
   html, body {
-    padding:0;
-    margin:0;
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-    height: 100%;
-  }
+      padding:0;
+      margin:0;
+      font-family: 'Montserrat', sans-serif;
+      width: 100%;
+      height: 100%;
+    }
     
   .header{
       display: flex;
@@ -60,7 +60,7 @@
 
   .title{
       font-size: 1.3rem;
-  }
+    }
 
   .kati{
       display: flex;
@@ -98,7 +98,6 @@
       border: 5px solid #fff;
       border-radius: 50%;
       margin: auto;
-
     }
 
   .desc-kati{
@@ -114,124 +113,121 @@
       align-items: center;
     }
 
-  .signo-kati{
+  .signo-kati, .signo-istvan{
       height: 80px;
- 
     }
-     
-  .signo-istvan{
-      height: 80px;
 
-  }
   .button {
-    display: block;
-    padding: 1.3rem;
-    background-color: rgba(55, 55, 55, 0.322);
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #333;
-    border: #fff solid 0.2rem;
-    border-radius: 15px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-bottom: 5%;
-    cursor: pointer;
-  }
+      display: block;
+      padding: 1.3rem;
+      background-color: rgba(55, 55, 55, 0.322);
+      text-align: center;
+      color: #fff;
+      text-shadow: 1px 1px 1px #333;
+      border: #fff solid 0.2rem;
+      border-radius: 15px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-bottom: 5%;
+      cursor: pointer;
+    }
 
   .split {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-
-  }
+      position: absolute;
+      width: 50%;
+      height: 100%;
+    }
 
   .split.left {
-    left:0;
-    background: url('./assets/kativirag_bicske.jpg') center center no-repeat;
-    background-size: cover;
-  }
+      left:0;
+      background: url('./assets/kativirag_bicske.jpg') center center no-repeat;
+      background-size: cover;
+    }
   
   .split.left:before {
-    position:absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: var(--left-bg-color);
-
-
-  }
+      position:absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: var(--left-bg-color);
+    }
   
   .split.right {
-    right:0;
-    background: url('./assets/zoldmuves_bicske.jpg') center center no-repeat;
-    background-size: cover;
-  }
+      right:0;
+      background: url('./assets/zoldmuves_bicske.jpg') center center no-repeat;
+      background-size: cover;
+    }
   
   .split.right:before {
-    position:absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: var(--right-bg-color);
+      position:absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: var(--right-bg-color);
+    }
 
-  }
   .overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, .3); 
-    width: 100%;
-    height: 100%;
-    transition: .5s ease;
-    opacity:1;
-    z-index: 199;
-  }
+      position: absolute;
+      bottom: 0;
+      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, .3); 
+      width: 100%;
+      height: 100%;
+      transition: .5s ease;
+      opacity:1;
+      z-index: 199;
+    }
   
   .split.left:hover .overlay {
-    opacity: 0;
-    z-index: 0;
-  }
+      opacity: 0;
+      z-index: 0;
+    }
 
   .split.right:hover .overlay {
-    opacity: 0;
-    z-index: 0;
-  }
+      opacity: 0;
+      z-index: 0;
+    }
  
   .split.left, .split.right, .split.right:before, .split.left:before {
-    transition: var(--speed) all ease-in-out;
-  }
+      transition: var(--speed) all ease-in-out;
+    }
 
   .button{
-    transition: 0.4s all ease-in-out;
-  }
+      transition: 0.4s all ease-in-out;
+    }
+
   .button:hover{
       background-color: rgba(55, 55, 55, 0.7);
       border-radius: 35px;
-  }
+    }
     
   @media(max-width: 1200px) {
     html, body {
-        padding:0;
-        margin:0;
-        font-family: 'Montserrat', sans-serif;
+      padding:0;
+      margin:0;
+      font-family: 'Montserrat', sans-serif;
+    }
 
-      }
-      .overlay{
-          opacity: 0;
-      }
-      .header{
-          width: 100vw;
-      }
+    .overlay{
+        opacity: 0;
+    }
+
+    .header{
+      width: 100vw;
+    }
+
     .container {
-        display: flex;;
-        flex-direction: column;
+      display: flex;;
+      flex-direction: column;
     }
+
     .quote{
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
     }
+
     h1 {
       font-size: 2rem;
     }
@@ -239,20 +235,23 @@
     .button {
       width: 12rem;
     }
+
     .desc-kati{
         text-align: center;
     }
+
     .image{
         width: 80px;
         border: 5px solid #fff;
         border-radius: 75px;
         margin: auto;
     }
+
     .split {
         display: block;
         position: relative;
         width: 100%;
         height: auto;
-      }
+    }
   }
  
