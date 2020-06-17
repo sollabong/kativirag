@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Unica+One&display=swap" rel="stylesheet">
+    <title>Kati Virág - Zöldműves</title>
+</head>
+
+<body>
+    <!-- facebook messenger -->
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v7.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/hu_HU/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Your Chat Plugin code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="398521200251217" theme_color="#ffc300"
+        logged_in_greeting="Üdvözlöm. Profi virágost, vagy dekoratőrt keres? Írjon nekem, segítek"
+        logged_out_greeting="Üdvözlöm. Profi virágost, vagy dekoratőrt keres? Írjon nekem, segítek">
+    </div>
+
+    <!-- oldal tartalom -->
+    <div class="header">
+        <div class="kativirag">
+            <img class="kativirag" src="./assets/sunflower.svg" alt="Kati Virág Bicske">
+        </div>
+        <div class="zoldmuves">
+            <img class="zoldmuves" src="./assets/harvest.svg" alt="Zöldműves Bicske">
+        </div>
+    </div>
+    <div class="container">
+        <div class="split left">
+
+            <div class="kati">
+                <h1>KATI VIRÁG</h1>
+                <div class="quote">
+                    <div class="profile-image">
+                        <img src="./assets/headshot-placeholder-female.jpg" alt="Soltész Kati, Kati Virág Bicske"
+                            class="image">
+                    </div>
+                    <div class="quote-right">
+                        <div class="desc-kati">
+                            <p><strong>Több, mint 30 éves virágkötői tapasztalatommal garantáltan azt adhatod
+                                    szeretteidnek,
+                                    amit megálmodtál</strong></p>
+                            <p>Alkalmakra, rendezvényekre csokrok, virágkosarak.<br>
+                                Esküvőkre csokrok, teremdekorációk.<br>
+                                Temetésre koszorúk.<br>
+                                Asztal dekorációk, székszoknyák kölcsönzése.
+                            </p>
+                        </div>
+                        <div class="signo">
+                            <img class="signo-kati" src="./assets/alairas1.svg" alt="Kativirág Bicske aláírás">
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="button">KAPCSOLAT</a>
+            </div>
+        </div>
+
+        <div class="split right">
+            <div class="kati">
+                <h1>ZÖLDMŰVES</h1>
+                <div class="quote">
+                    <div class="profile-image">
+                        <img src="./assets/staff-placeholder-male.jpg" alt="Soltész István, Zöldműves Bicske"
+                            class="image">
+                    </div>
+                    <div class="quote-right">
+                        <div class="desc-kati">
+                            <p><strong>Több, mint 30 éves virágkötői tapasztalatommal garantáltan azt adhatod
+                                    szeretteidnek,
+                                    amit megálmodtál</strong></p>
+                            <p>Alkalmakra, rendezvényekre csokrok, virágkosarak.<br>
+                                Esküvőkre csokrok, teremdekorációk.<br>
+                                Temetésre koszorúk.<br>
+                                Asztal dekorációk, székszoknyák kölcsönzése.
+                            </p>
+                        </div>
+                        <div class="signo">
+                            <img class="signo-istvan" src="./assets/alairas2.svg" alt="Zöldműves Bicske aláírás">
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="button">KAPCSOLAT</a>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

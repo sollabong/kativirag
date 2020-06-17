@@ -1,0 +1,240 @@
+:root {
+    --container-bg-color: #333;
+    --left-bg-color: rgba(255, 196, 0, 0.678);
+    --left-button-hover-color: rgba(6, 235, 101, 0.3);
+    --right-bg-color: rgba(6, 235, 101, 0.3);
+    --right-button-hover-color: rgba(255, 196, 0, 0.678);
+    --hover-width: 75%;
+    --other-width: 25%;
+    --speed: 1000ms;
+  }
+  
+  html, body {
+    padding:0;
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100%;
+    /* overflow-x: hidden; */
+  }
+  
+
+  
+  .split.left .button:hover {
+    background-color: var(--left-button-hover-color);
+    border-color: var(--left-button-hover-color);
+  }
+  
+  .split.right .button:hover {
+    background-color: var(--right-button-hover-color);
+    border-color: var(--right-button-hover-color);
+  }
+  
+  .header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position:fixed;
+      left:0;
+      right:0;
+      top:0;
+      height: 60px;
+      width: 100%;
+      padding-top: 10px;
+      background-color: rgba(255, 255, 255, 0.87);
+      overflow: hidden;
+      z-index: 200;
+  }
+  .kativirag{
+      height:40px;
+      float: left;
+      margin-left: 10px;
+      color:green;
+  }
+  .zoldmuves{
+    height:40px;
+    float: right;
+    margin-right: 10px;
+}
+  .container {
+      display: flex;;
+      flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--container-bg-color);
+    
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: #fff;
+    z-index: 100;
+    margin-top: 100px;
+    font-family: 'Unica One', sans-serif;
+  }
+
+  .kati{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      z-index: 100;
+  }
+
+  .quote{
+      display: flex;
+      flex-direction: row;
+      background-color: rgba(255, 255, 255, 0.719);
+      border: 0;
+      border-radius: 15px;
+      margin: 30px;
+  }
+
+  .profile-image{
+      display: flex;
+      vertical-align: center;
+      padding: 5%;
+  }
+  .image{
+      width: 150px;
+      border: 5px solid #fff;
+      border-radius: 75px;
+      margin: auto;
+      z-index: 999999;
+  }
+
+  .desc-kati{
+      text-align: center;
+      width: 80%;
+      color: #000;
+      z-index: 100;
+      margin:1% 5% 1% 5%;
+  }
+  
+  .quote-right{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .signo-kati{
+      height: 80px;
+      z-index: 9999;
+  }
+  .signo-istvan{
+    height: 80px;
+    z-index: 9999;
+}
+  .button {
+    display: block;
+z-index: 100;
+    height: 2.5rem;
+    padding-top: 1.3rem;
+    width: 15rem;
+    text-align: center;
+    color: #fff;
+    border: #fff solid 0.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 5%;
+    /* transform: translateX(-50%); */
+  }
+  
+  .split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    /* overflow: hidden; */
+  }
+  
+  .split.left {
+    left:0;
+    background: url('./assets/kativirag_bicske.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  
+  .split.left:before {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--left-bg-color);
+  }
+  
+  .split.right {
+    right:0;
+    background: url('./assets/zoldmuves_bicske.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  
+  .split.right:before {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--right-bg-color);
+  }
+  
+  .split.left, .split.right, .split.right:before, .split.left:before {
+    transition: var(--speed) all ease-in-out;
+  }
+  
+  .hover-left .left {
+    width: var(--hover-width);
+  }
+  
+  .hover-left .right {
+    width: var(--other-width);
+  }
+  
+  
+  .hover-right .right {
+    width: var(--hover-width);
+  }
+  
+  .hover-right .left {
+    width: var(--other-width);
+  }
+    
+  @media(max-width: 1200px) {
+    html, body {
+        padding:0;
+        margin:0;
+        font-family: 'Montserrat', sans-serif;
+
+      }
+      .header{
+          width: 100vw;
+      }
+    .container {
+        display: flex;;
+        flex-direction: column;
+    }
+    .quote{
+        display: flex;
+        flex-direction: column;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .button {
+      width: 12rem;
+    }
+    .image{
+        width: 80px;
+        border: 5px solid #fff;
+        border-radius: 75px;
+        margin: auto;
+        z-index: 999999;
+    }
+    .split {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+  }
+ 
