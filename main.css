@@ -1,11 +1,7 @@
 :root {
     --container-bg-color: #333;
-    --left-bg-color: rgba(255, 196, 0, 0.678);
-    --left-button-hover-color: rgba(6, 235, 101, 0.3);
-    --right-bg-color: rgba(6, 235, 101, 0.3);
-    --right-button-hover-color: rgba(255, 196, 0, 0.678);
-    --hover-width: 75%;
-    --other-width: 25%;
+    --left-bg-color: rgba(255, 196, 0, 0.596);
+    --right-bg-color: rgba(6, 235, 102, 0.596);
     --speed: 1000ms;
   }
   
@@ -15,21 +11,8 @@
     font-family: 'Montserrat', sans-serif;
     width: 100%;
     height: 100%;
-    /* overflow-x: hidden; */
   }
-  
-
-  
-  .split.left .button:hover {
-    background-color: var(--left-button-hover-color);
-    border-color: var(--left-button-hover-color);
-  }
-  
-  .split.right .button:hover {
-    background-color: var(--right-button-hover-color);
-    border-color: var(--right-button-hover-color);
-  }
-  
+    
   .header{
       display: flex;
       flex-direction: row;
@@ -44,105 +27,109 @@
       background-color: rgba(255, 255, 255, 0.87);
       overflow: hidden;
       z-index: 200;
-  }
+    }
+
   .kativirag{
       height:40px;
       float: left;
       margin-left: 10px;
       color:green;
-  }
+    }
+
   .zoldmuves{
-    height:40px;
-    float: right;
-    margin-right: 10px;
-}
+      height:40px;
+      float: right;
+      margin-right: 10px;
+    }
+
   .container {
       display: flex;;
       flex-direction: row;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: var(--container-bg-color);
-    
-  }
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: var(--container-bg-color);
+    }
 
   h1 {
-    font-size: 4rem;
-    color: #fff;
-    z-index: 100;
-    margin-top: 100px;
-    font-family: 'Unica One', sans-serif;
+      font-size: 4rem;
+      color: #fff;
+      margin-top: 100px;
+      font-family: 'Unica One', sans-serif;
+    }
+
+  .title{
+      font-size: 1.3rem;
   }
-.title{
-    font-size: 1.3rem;
-}
+
   .kati{
       display: flex;
       flex-direction: column;
       align-items: center;
       height: 100%;
-      z-index: 100;
- 
-  }
-  .pisti{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    z-index: 100;
+      position: relative;
+    }
 
-}
+  .pisti{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      position: relative;
+    }
+
   .quote{
       display: flex;
       flex-direction: row;
-      background-color: rgba(255, 255, 255, 0.719);
+      background-color: rgba(255, 255, 255, 0.432);
       border: 0;
       border-radius: 15px;
       margin: 30px;
-  }
+    }
 
   .profile-image{
       display: flex;
       vertical-align: center;
       padding: 5%;
-  }
+    }
+
   .image{
       width: 150px;
       border: 5px solid #fff;
       border-radius: 50%;
       margin: auto;
-      z-index: 198;
-  }
+
+    }
 
   .desc-kati{
       text-align: justify;
       width: 80%;
       color: #000;
-      z-index: 100;
       margin:1% 5% 1% 5%;
-  }
+    }
   
   .quote-right{
       display: flex;
       flex-direction: column;
       align-items: center;
-  }
+    }
+
   .signo-kati{
       height: 80px;
-      z-index: 9999;
-  }
+ 
+    }
+     
   .signo-istvan{
-    height: 80px;
-    z-index: 9999;
-}
+      height: 80px;
+
+  }
   .button {
     display: block;
-    z-index: 100;
-    height: 2.5rem;
-    padding-top: 1.3rem;
-    width: 21rem;
+    padding: 1.3rem;
+    background-color: rgba(55, 55, 55, 0.322);
     text-align: center;
     color: #fff;
+    text-shadow: 1px 1px 1px #333;
     border: #fff solid 0.2rem;
     border-radius: 15px;
     font-size: 1rem;
@@ -150,6 +137,7 @@
     text-transform: uppercase;
     text-decoration: none;
     margin-bottom: 5%;
+    cursor: pointer;
   }
 
   .split {
@@ -172,6 +160,7 @@
     height: 100%;
     background: var(--left-bg-color);
 
+
   }
   
   .split.right {
@@ -186,6 +175,7 @@
     width: 100%;
     height: 100%;
     background: var(--right-bg-color);
+
   }
   .overlay {
     position: absolute;
@@ -197,20 +187,29 @@
     transition: .5s ease;
     opacity:1;
     z-index: 199;
-   
   }
   
   .split.left:hover .overlay {
     opacity: 0;
+    z-index: 0;
   }
+
   .split.right:hover .overlay {
     opacity: 0;
+    z-index: 0;
   }
  
   .split.left, .split.right, .split.right:before, .split.left:before {
     transition: var(--speed) all ease-in-out;
   }
 
+  .button{
+    transition: 0.4s all ease-in-out;
+  }
+  .button:hover{
+      background-color: rgba(55, 55, 55, 0.7);
+      border-radius: 35px;
+  }
     
   @media(max-width: 1200px) {
     html, body {
@@ -248,7 +247,6 @@
         border: 5px solid #fff;
         border-radius: 75px;
         margin: auto;
-        z-index: 999999;
     }
     .split {
         display: block;
