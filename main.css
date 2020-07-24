@@ -34,7 +34,6 @@
       height:40px;
       float: left;
       margin-left: 10px;
-      color:green;
     }
 
   .zoldmuves{
@@ -53,7 +52,7 @@
     }
 
     .munka{
-      background-color:rgb(253, 238, 105);
+      background-color:#FFD53D;
       text-align: center;
       padding-top: 50px;
   font-size: 4rem;
@@ -70,15 +69,15 @@
     grid-auto-flow: dense; 
     margin: auto;
     padding: 20px 20px;
-    background-color:rgb(253, 238, 105);
+    background-color:#FFD53D;
   }
   
   .gallery__item {
     align-items: center;
     justify-content: center;
-    border: 0.2rem solid white;
+    
     border-radius: 10px;
-    filter: grayscale(80%);
+    filter: grayscale(100%);
   }
   .gallery__item:hover{
     transform: scale(1.03);
@@ -177,13 +176,11 @@
     }
 
   .button {
-      display: block;
       padding: 1.3rem;
       background-color: rgba(55, 55, 55, 0.322);
       text-align: center;
       color: #fff;
-      text-shadow: 1px 1px 1px #333;
-      border: #fff solid 0.2rem;
+      border:0;
       border-radius: 15px;
       font-size: 1rem;
       font-weight: bold;
@@ -210,7 +207,7 @@
       content: "";
       width: 100%;
       height: 100%;
-      background: var(--left-bg-color);
+      background: #ffd53db0;
     }
   
   .split.right {
@@ -224,7 +221,7 @@
       content: "";
       width: 100%;
       height: 100%;
-      background: var(--right-bg-color);
+      background: #2ce84f88;
     }
 
   .overlay {
@@ -262,15 +259,74 @@
       border-radius: 35px;
     }
     
+.csokor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color:  #64e07b;
+  color: white;
+  border-radius: 10px;
+}
 
+.eskuvo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: #2db646;
+  color: white;
+  border-radius: 10px;
+}
+
+.zoldseg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: #2CE84F;
+  color: white;
+  border-radius: 10px;
+}
 /* contact */
 .contact{
-    background-color: rgba(6, 235, 102, 0.596);
+    background-color: #2ce84fce;
     text-align: center;
     height: auto;
 }
+
+.contact__list {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.contact__list li:not(:last-child) {
+  margin-right: 1.2rem;
+}
+
+.contact__icon {
+  display: inline-block;
+  width: 80.4px;
+  padding: 19px 0;
+  font-size: 4rem;
+  text-decoration: none;
+}
+
+.fab {
+  color:white;
+}
 .kapcsolat{
-  padding-top: 50px;
+  padding-top: 20px;
   font-size: 4rem;
   color: #fff;
   font-family: 'Unica One', sans-serif;
@@ -295,10 +351,10 @@
 .input-text{
   width: 50vw;
   align-content: center;
-  background-color: rgb(34, 202, 104);
+  background-color: #2CE84F;
   display: block;
   border: none;
-  border-bottom: 2px solid white;
+  border: 2px solid white;
   color: white;
   font-family: 'Montserrat';
   padding: 16px 32px;
@@ -308,19 +364,21 @@
   text-align: center;
   justify-content: center;
 }
+
 .label{
   font-family: 'Unica One', sans-serif;
+  color: white;
 }
 
 .submit-btn {
 
   transition: 0.4s all ease-in-out;
-  background-color: rgb(34, 202, 104);
+  background-color: #2CE84F;
   color: white;
+  border: 2px solid white;
   padding: 1.3rem;
   text-align: center;
-  text-shadow: 1px 1px 1px #333;
-  border: #fff solid 0.2rem;
+  border: 0;
   border-radius: 15px;
   font-size: 1rem;
   font-weight: bold;
@@ -331,19 +389,33 @@
 }
 
 .submit-btn:hover{
-  background-color: rgba(0, 255, 128, 0.7);
+  background-color: #2CE84F;
   border-radius: 35px;
 }
 
 .thankyou_message{
   display:none;
   height: 100px;
-  background: rgba(6, 235, 102, 0.596);
+
 align-items: center;
   justify-content: center;
   vertical-align: center;
   color: white;
 } 
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:black;
+  background-color: #FFD53D;
+  font-size: small;
+  text-align: center;
+  height: 100px;
+  font-family: 'Montserrat', sans-serif;
+  width:100%;
+justify-content: center;
+}
   @media(max-width: 1200px) {
   
 
@@ -389,6 +461,12 @@ align-items: center;
         position: relative;
         width: 100%;
         /* height: auto; */
+    }
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .gallery__item {
       filter: grayscale(0%);
