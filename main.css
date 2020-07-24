@@ -415,6 +415,7 @@ align-items: center;
   font-family: 'Montserrat', sans-serif;
   width:100%;
 justify-content: center;
+padding: 10px;
 }
   @media(max-width: 1200px) {
   
