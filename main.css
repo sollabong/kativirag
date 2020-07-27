@@ -217,7 +217,7 @@
     grid-auto-flow: dense; 
     margin: auto;
     padding: 20px 20px;
-    background-color:#FFD53D;
+    background-color: #ffd53db0;
   }
   
   .gallery__item {
@@ -273,7 +273,7 @@
   height: 100%;
   width: 100%;
   text-align: center;
-  background-color: #2db646;
+  background-color: #64e07b;
   color: white;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -286,7 +286,7 @@
   height: 100%;
   width: 100%;
   text-align: center;
-  background-color: #2CE84F;
+  background-color: #64e07b;
   color: white;
   border-radius: 10px;
   margin-bottom: 10px;
