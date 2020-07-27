@@ -263,6 +263,7 @@
   background-color:  #64e07b;
   color: white;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .eskuvo{
@@ -275,6 +276,7 @@
   background-color: #2db646;
   color: white;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .zoldseg{
@@ -287,6 +289,7 @@
   background-color: #2CE84F;
   color: white;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 /* contact */
 
@@ -469,6 +472,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      
     }
     .gallery__item {
       filter: grayscale(0%);
