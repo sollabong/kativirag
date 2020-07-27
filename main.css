@@ -1,64 +1,212 @@
-:root {
-      --container-bg-color: #333;
-      --left-bg-color: rgba(255, 196, 0, 0.596);
-      --right-bg-color: rgba(6, 235, 102, 0.596);
-      --speed: 1000ms;
-    }
-  
   html, body {
-      padding:0;
-      margin:0;
-      font-family: 'Montserrat', sans-serif;
-      width: 100%;
-      height: 100%;
+    padding:0;
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100%;
+  }
 
-    }
+  /* header */
 
   .header{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      position:fixed;
-      left:0;
-      right:0;
-      top:0;
-      height: 60px;
-      width: 100%;
-      padding-top: 10px;
-      background-color: rgba(255, 255, 255, 0.87);
-      overflow: hidden;
-      z-index: 200;
-    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    height: 60px;
+    width: 100%;
+    padding-top: 10px;
+    background-color: rgba(255, 255, 255, 0.87);
+    overflow: hidden;
+    z-index: 200;
+  }
 
   .kativirag{
-      height:40px;
-      float: left;
-      margin-left: 10px;
-    }
+    height:40px;
+    float: left;
+    margin-left: 10px;
+  }
 
   .zoldmuves{
-      height:40px;
-      float: right;
-      margin-right: 10px;
-    }
+    height:40px;
+    float: right;
+    margin-right: 10px;
+  }
 
   .container {
-      display: flex;;
-      flex-direction: row;
-      position: relative;
-      width: 100%;
-      min-height: 100%;
-      background: var(--container-bg-color);
-    }
+    display: flex;;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background: #333;
+  }
 
-    .munka{
-      background-color:#FFD53D;
-      text-align: center;
-      padding-top: 50px;
-  font-size: 4rem;
-  color: #fff;
-  font-family: 'Unica One', sans-serif;
-    }
+  /* first view */
+
+  h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin-top: 100px;
+    font-family: 'Unica One', sans-serif;
+  }
+
+  .title{
+    font-size: 1.3rem;
+  }
+
+  .kati{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    position: relative;
+  }
+
+  .pisti{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    position: relative;
+  }
+
+  .quote{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.432);
+    border: 0;
+    border-radius: 15px;
+    margin: 30px;
+  }
+
+  .profile-image{
+    display: flex;
+    vertical-align: center;
+    padding: 5%;
+  }
+
+  .image{
+    width: 150px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  .desc-kati{
+    text-align: justify;
+    width: 80%;
+    color: #000;
+    margin:1% 5% 1% 5%;
+  }
+ 
+  .quote-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .signo-kati, .signo-istvan{
+    height: 80px;
+  }
+
+  .button {
+    padding: 1.3rem;
+    background-color: rgba(55, 55, 55, 0.322);
+    text-align: center;
+    color: #fff;
+    border:0;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 5%;
+    cursor: pointer;
+  }
+
+/* split */
+
+  .split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+  }
+
+  .split.left {
+    left:0;
+    background: url('./assets/kativirag_bicske.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  
+  .split.left:before {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #ffd53db0;
+  }
+  
+  .split.right {
+    right:0;
+    background: url('./assets/zoldmuves_bicske.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  
+  .split.right:before {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #2ce84f88;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, .3); 
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    opacity:1;
+    z-index: 199;
+  }
+  
+  .split.left:hover .overlay {
+    opacity: 0;
+    z-index: 0;
+  }
+
+  .split.right:hover .overlay {
+    opacity: 0;
+    z-index: 0;
+  }
+ 
+  .split.left, .split.right, .split.right:before, .split.left:before {
+    transition: 200ms all ease-in-out;
+  }
+
+  .button{
+    transition: 0.4s all ease-in-out;
+  }
+
+  .button:hover{
+    background-color: rgba(55, 55, 55, 0.7);
+    border-radius: 35px;
+  }
+
+  .munka{
+    background-color:#FFD53D;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 4rem;
+    color: #fff;
+    font-family: 'Unica One', sans-serif;
+  }
     /* gallery */
 
   .gallery {
@@ -75,10 +223,10 @@
   .gallery__item {
     align-items: center;
     justify-content: center;
-    
     border-radius: 10px;
     filter: grayscale(100%);
   }
+
   .gallery__item:hover{
     transform: scale(1.03);
     transition: all 0.5s ease-in-out;
@@ -104,160 +252,6 @@
     grid-column: span 2;
     grid-row: span 2;
   }
-    .contact{
-      height: 100%;
-    }
-
-  h1 {
-      font-size: 4rem;
-      color: #fff;
-      margin-top: 100px;
-      font-family: 'Unica One', sans-serif;
-    }
-
-  .title{
-      font-size: 1.3rem;
-    }
-
-  .kati{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100%;
-      position: relative;
-    }
-
-  .pisti{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 100%;
-      position: relative;
-    }
-
-  .quote{
-      display: flex;
-      flex-direction: row;
-      background-color: rgba(255, 255, 255, 0.432);
-      border: 0;
-      border-radius: 15px;
-      margin: 30px;
-    }
-
-  .profile-image{
-      display: flex;
-      vertical-align: center;
-      padding: 5%;
-    }
-
-  .image{
-      width: 150px;
-      border: 5px solid #fff;
-      border-radius: 50%;
-      margin: auto;
-   
-    }
-
-  .desc-kati{
-      text-align: justify;
-      width: 80%;
-      color: #000;
-      margin:1% 5% 1% 5%;
-    }
- 
-  .quote-right{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-  .signo-kati, .signo-istvan{
-      height: 80px;
-    }
-
-  .button {
-      padding: 1.3rem;
-      background-color: rgba(55, 55, 55, 0.322);
-      text-align: center;
-      color: #fff;
-      border:0;
-      border-radius: 15px;
-      font-size: 1rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-decoration: none;
-      margin-bottom: 5%;
-      cursor: pointer;
-    }
-
-  .split {
-      position: absolute;
-      width: 50%;
-      height: 100%;
-    }
-
-  .split.left {
-      left:0;
-      background: url('./assets/kativirag_bicske.jpg') center center no-repeat;
-      background-size: cover;
-    }
-  
-  .split.left:before {
-      position:absolute;
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: #ffd53db0;
-    }
-  
-  .split.right {
-      right:0;
-      background: url('./assets/zoldmuves_bicske.jpg') center center no-repeat;
-      background-size: cover;
-    }
-  
-  .split.right:before {
-      position:absolute;
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: #2ce84f88;
-    }
-
-  .overlay {
-      position: absolute;
-      bottom: 0;
-      background: rgb(0, 0, 0);
-      background: rgba(0, 0, 0, .3); 
-      width: 100%;
-      height: 100%;
-      transition: .5s ease;
-      opacity:1;
-      z-index: 199;
-    }
-  
-  .split.left:hover .overlay {
-      opacity: 0;
-      z-index: 0;
-    }
-
-  .split.right:hover .overlay {
-      opacity: 0;
-      z-index: 0;
-    }
- 
-  .split.left, .split.right, .split.right:before, .split.left:before {
-      transition: var(--speed) all ease-in-out;
-    }
-
-  .button{
-      transition: 0.4s all ease-in-out;
-    }
-
-  .button:hover{
-      background-color: rgba(55, 55, 55, 0.7);
-      border-radius: 35px;
-    }
     
 .csokor{
   display: flex;
@@ -295,113 +289,114 @@
   border-radius: 10px;
 }
 /* contact */
-.contact{
-    background-color: #2ce84fce;
-    text-align: center;
-    height: auto;
-}
 
-.contact__list {
-  display: inline-flex;
-  position: relative;
+.contact{
+  background-color: #64e07b;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 0px;
-  list-style-type: none;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
 }
 
-.contact__list li:not(:last-child) {
-  margin-right: 1.2rem;
+.fbcontact{
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
-.contact__icon {
-  display: inline-block;
-  width: 80.4px;
-  padding: 19px 0;
+.fab{
   font-size: 4rem;
-  text-decoration: none;
 }
 
-.fab {
-  color:white;
-}
-.kapcsolat{
-  padding-top: 20px;
+.kerdezz{
   font-size: 4rem;
   color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-family: 'Unica One', sans-serif;
-}
-.contact-form{
   text-align: center;
-  justify-content: center;
-  display: block;
-  padding: 2%;
+}
 
+.kapcsolat{
+  width: 50%;
+  background-color: #64e07b;
+  text-align: right;
+  height: 400px;
+  padding-right: 20px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.contact-form h1{
-  margin-top: auto;
-}
-.form-field{
+
+.form-field{ 
+  display: flex;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 15px;
   position: relative;
-  text-align: center;
-  justify-content: center;
-  margin-bottom: 10px;
-}
 
-.input-text{
-  width: 50vw;
-  align-content: center;
-  background-color: #2CE84F;
-  display: block;
-  border: none;
-  border: 2px solid white;
-  color: white;
-  font-family: 'Montserrat';
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: auto;
-  cursor: pointer;
-  text-align: center;
-  justify-content: center;
 }
+.input{
+  width: 100%;
+  height: 55px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  outline: 0;
 
+}
 .label{
-  font-family: 'Unica One', sans-serif;
-  color: white;
-}
-
-.submit-btn {
-
-  transition: 0.4s all ease-in-out;
-  background-color: #2CE84F;
-  color: white;
-  border: 2px solid white;
-  padding: 1.3rem;
-  text-align: center;
-  border: 0;
-  border-radius: 15px;
+  position: absolute;
+  right: 0;
+  background: #FFD53D;
+  width: 30%;
+  border-radius: 0px 5px 5px 0px;
   font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  margin-bottom: 5%;
-  cursor: pointer;
+  height: inherit;
+  text-align: center;
+  visibility: hidden;
+  transition: 200ms all ease-in-out;
 }
 
-.submit-btn:hover{
-  background-color: #2CE84F;
-  border-radius: 35px;
+.input:focus + .label{
+  visibility: visible;
 }
 
-.thankyou_message{
-  display:none;
-  height: 100px;
-
-align-items: center;
+.map{
+  width: 50%;
+  height: 400px;
+}
+.contactmap{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  vertical-align: center;
-  color: white;
-} 
+  width: 100%;
+  overflow: hidden;
+  background-color: #64e07b;
+  height: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.kapcsolat .button {
+  width: 100%;
+  margin-bottom: 0;
+  margin-top: 3rem;
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}
+
+/* footer */
 
 .footer{
   display: flex;
@@ -413,9 +408,8 @@ align-items: center;
   text-align: center;
   height: 100px;
   font-family: 'Montserrat', sans-serif;
-  width:100%;
-justify-content: center;
-padding: 10px;
+  justify-content: center;
+  padding: 10px;
 }
   @media(max-width: 1200px) {
   
@@ -438,12 +432,19 @@ padding: 10px;
       flex-direction: column;
     }
 
-    h1, .kapcsolat, .munka {
+    h1, .kerdezz, .munka {
       font-size: 2rem;
     }
   
     .button {
-      width: 12rem;
+      width: 16rem;
+    }
+    .kapcsolat .button {
+      width: 100%;
+      margin-bottom: 0;
+      margin-top: 3rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
 
     .desc-kati{
@@ -471,6 +472,18 @@ padding: 10px;
     }
     .gallery__item {
       filter: grayscale(0%);
+    }
+    .contactmap{
+      display: flex;
+      flex-direction: column;
+      height: 800px;
+    }
+    .kapcsolat{
+      width: 80%;
+    }
+
+    .map{
+      width: 100%;
     }
   }
  
