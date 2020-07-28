@@ -76,7 +76,7 @@
                     </div>
                     <div class="quote-right">
                         <div class="desc-kati">
-                            <p class="title"><strong>30 éve dolgozom virágkötőként, folyamatosan alkalmazkodva a
+                            <p class="title"><strong>30 éve dolgozom a virágkötőként, folyamatosan alkalmazkodva a
                                     legújabb
                                     trendekhez. </strong></p>
                             <p>Nincs lehetetlen kérés, próbálok minden egyedi igényt kielégíteni.<br>
@@ -206,7 +206,8 @@
             <strong>KÉRDEZZ, VAGY RENDELJ TŐLÜNK ÜZENETBEN!</strong>
         </p>
         <div class="contactmap">
-            <form class="kapcsolat">
+            <form class="gform kapcsolat" method="POST" data-email="example@email.net"
+                action="https://script.google.com/macros/s/AKfycbxmgSm_N2Yd-1a6p2961RBj-DEnCMMj4HWtG7974tpwH-T1A4w8/exec">
                 <div class="form-field">
                     <input id="name" name="name" class="input" type="text" placeholder="Neved" required>
                     <label class="label" for="name" name="name"><br>Neved</label>
@@ -223,7 +224,9 @@
                 </div>
 
                 <button class="button" type="submit" value="KÜLDÉS">KÜLDÉS</button>
-
+                <div class="thankyou_message" style="display:none;">
+                    <h2><strong>KÖSZÖNJÜK!</strong> </br> Hamarosan felvesszük veled a kapcsolatot</h2>
+                </div>
             </form>
             <!-- google maps -->
             <div class="map">
@@ -238,6 +241,7 @@
                 Gábor (Sollabong)</a></p>
         <p class="creator">Minden jog fenntartva, Kati Virág, Zöldműves 2020, Bicske, HU</p>
     </section>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 </body>
 
