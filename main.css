@@ -450,6 +450,7 @@
 
     .overlay{
         opacity: 0;
+        display: none;
     }
 
     .header{
