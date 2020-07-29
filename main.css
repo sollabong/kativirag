@@ -204,14 +204,20 @@
   }
 
   .munka{
-    background-color:#81c78e;
+    background-color:#81c78ecb;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 30px;
     font-size: 4rem;
     color: #fff;
     font-family: 'Unica One', sans-serif;
   }
     /* gallery */
+
+    .gal{
+      margin: 0;
+      background-image: url(./assets/bggal.jpg);
+      background-repeat: repeat;
+    }
 
   .gallery {
     display: grid;
@@ -221,7 +227,7 @@
     grid-auto-flow: dense; 
     margin: auto;
     padding: 20px 20px;
-    background-color:#81c78e;
+    background-color:#81c78ecb;
   }
   
   .gallery__item {
@@ -298,7 +304,10 @@
 /* contact */
 
 .contact{
-  background-color: #64e07b;
+  background-image: url(./assets/background-contact.jpg);
+  box-shadow:inset 0 0 0 2000px #64e07bab;
+  background-size: cover;
+  /* background-color: ; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -342,7 +351,7 @@
 
 .kapcsolat{
   width: 50%;
-  background-color: #64e07b;
+  /* background-color: #64e07b; */
   text-align: right;
   height: 400px;
   padding-right: 20px;
@@ -400,7 +409,7 @@
   justify-content: center;
   width: 100%;
   overflow: hidden;
-  background-color: #64e07b;
+  /* background-color: #64e07b; */
   height: 400px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -498,6 +507,7 @@
     }
     .gallery__item {
       filter: grayscale(0%);
+      margin-bottom: 15px;
     }
     .contactmap{
       display: flex;
